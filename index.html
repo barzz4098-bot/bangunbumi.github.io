@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Creator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loading">
+    <div class="loader"></div>
+    <h2>MEMBANGUN BUMI...</h2>
+    <p>Menyiapkan kehidupan...</p>
+</div>
+
+<header>
+    <div class="logo">
+        🌍 EARTH <span>CREATOR</span>
+    </div>
+
+    <div class="header-info">
+        <div>
+            ERA
+            <strong id="eraName">BUMI AWAL</strong>
+        </div>
+
+        <div>
+            WAKTU
+            <strong id="worldYear">0</strong>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <aside class="panel left-panel">
+
+        <h2>🌍 DUNIA</h2>
+
+        <button class="tool active" data-tool="land">
+            🟩 Tambah Daratan
+        </button>
+
+        <button class="tool" data-tool="water">
+            🌊 Tambah Laut
+        </button>
+
+        <button class="tool" data-tool="mountain">
+            🏔️ Pegunungan
+        </button>
+
+        <button class="tool" data-tool="forest">
+            🌲 Hutan
+        </button>
+
+        <button class="tool" data-tool="desert">
+            🏜️ Gurun
+        </button>
+
+        <button class="tool" data-tool="snow">
+            ❄️ Salju
+        </button>
+
+        <button class="tool" data-tool="volcano">
+            🌋 Gunung Api
+        </button>
+
+        <button class="tool" data-tool="river">
+            💧 Sungai
+        </button>
+
+        <hr>
+
+        <h2>🐾 KEHIDUPAN</h2>
+
+        <button class="tool" data-tool="plant">
+            🌱 Tanaman
+        </button>
+
+        <button class="tool" data-tool="animal">
+            🐾 Hewan
+        </button>
+
+        <button class="tool" data-tool="human">
+            👤 Manusia
+        </button>
+
+        <button class="tool" data-tool="village">
+            🏘️ Desa
+        </button>
+
+        <button class="tool" data-tool="city">
+            🏙️ Kota
+        </button>
+
+        <button class="tool" data-tool="factory">
+            🏭 Industri
+        </button>
+
+    </aside>
+
+
+    <section id="world">
+
+        <div id="hint">
+            🖱️ Drag untuk memutar Bumi • Scroll untuk zoom
+        </div>
+
+        <div id="earthStats">
+
+            <div class="stat">
+                <span>🌳 Vegetasi</span>
+                <strong id="vegetation">0%</strong>
+            </div>
+
+            <div class="stat">
+                <span>🐾 Hewan</span>
+                <strong id="animals">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>👥 Populasi</span>
+                <strong id="population">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>🏙️ Kota</span>
+                <strong id="cities">0</strong>
+            </div>
+
+        </div>
+
+        <div id="message">
+            Selamat datang di Earth Creator 🌍
+        </div>
+
+    </section>
+
+
+    <aside class="panel right-panel">
+
+        <h2>⚙️ KONTROL</h2>
+
+        <label>🌡️ Suhu</label>
+
+        <input
+            type="range"
+            id="temperature"
+            min="-30"
+            max="50"
+            value="15"
+        >
+
+        <div class="value">
+            <span id="temperatureValue">15°C</span>
+        </div>
+
+
+        <label>🌧️ Curah Hujan</label>
+
+        <input
+            type="range"
+            id="rain"
+            min="0"
+            max="100"
+            value="50"
+        >
+
+        <div class="value">
+            <span id="rainValue">50%</span>
+        </div>
+
+
+        <label>🌬️ Atmosfer</label>
+
+        <input
+            type="range"
+            id="atmosphere"
+            min="0"
+            max="100"
+            value="80"
+        >
+
+        <div class="value">
+            <span id="atmosphereValue">80%</span>
+        </div>
+
+
+        <hr>
+
+        <h2>☀️ WAKTU</h2>
+
+        <button id="dayButton" class="controlButton">
+            ☀️ Siang
+        </button>
+
+        <button id="nightButton" class="controlButton">
+            🌙 Malam
+        </button>
+
+        <button id="weatherButton" class="controlButton">
+            🌧️ Hujan
+        </button>
+
+
+        <hr>
+
+        <h2>⏳ PERKEMBANGAN</h2>
+
+        <input
+            type="range"
+            id="timeline"
+            min="0"
+            max="100"
+            value="0"
+        >
+
+        <div id="timelineValue">
+            0 tahun
+        </div>
+
+        <button id="evolveButton" class="evolve">
+            🚀 EVOLUSI DUNIA
+        </button>
+
+
+        <hr>
+
+        <h2>💥 BENCANA</h2>
+
+        <button id="meteorButton" class="danger">
+            ☄️ Meteor
+        </button>
+
+        <button id="eruptionButton" class="danger">
+            🌋 Letusan
+        </button>
+
+        <button id="stormButton" class="danger">
+            🌪️ Badai
+        </button>
+
+
+        <hr>
+
+        <button id="resetButton" class="reset">
+            🔄 RESET BUMI
+        </button>
+
+    </aside>
+
+</main>
+
+<div id="notification"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
